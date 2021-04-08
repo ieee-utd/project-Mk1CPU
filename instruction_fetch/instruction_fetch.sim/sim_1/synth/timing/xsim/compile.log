@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/uncoo/Documents/Source/Verilog/instruction_fetch/instruction_fetch.sim/sim_1/synth/timing/xsim/instr_fetch_testbench_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_fetch
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/uncoo/Documents/Source/Verilog/instruction_fetch/instruction_fetch.srcs/sim_1/new/instr_fetch_testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instr_fetch_testbench
