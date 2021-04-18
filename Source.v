@@ -30,8 +30,8 @@ input [1023:0] dataIn,
 input control,
 input [31:0] addr,
 input [7:0] progInput,
-output [7:0] dataOut,
-output  [1023:0] memOut,
+output reg[7:0] dataOut,
+output  reg[1023:0] memOut,
 output hit
  );
  
@@ -62,22 +62,20 @@ begin
           if (tagTable [index][20] == 1 )
           begin
                newAddr <= tagTable [index][19:0] << 11 + ( index << 8 );
-               memOut1 <= RegisterFile1 [index][1023:0]; 
+               memOut <= RegisterFile1 [index][1023:0]; 
           end 
           tagTable[index][20:0] <=  20'b10000000000000000000  +  tag[19:0];
           RegisterFile1[index][1023:0] <= dataIn [ 1023:0 ];
     end
     if ( control )    
     begin
-               dataOut1 <= RegisterFile1[index][offsetInteger +: 8]; 
+               dataOut <= RegisterFile1[index][offsetInteger +: 8]; 
     end 
     else
     begin 
                RegisterFile1[index] [offsetInteger +: 8] <= progInput [7:0];
     end
 end
-assign dataOut = dataOut1 [7:0]; 
-assign memOut = memOut1[1023:0]; 
 
     
 

@@ -32,13 +32,7 @@ wire [7:0] dataOut;
 wire [1023:0] memOut;
 wire hit;
 
-Cache_Source test_Cache_Source (
-.clk(clk),
-.dataIn(dataIn),
-.control(control),
-.addr(addr),
-.progInput(progInput)
-);
+Cache_Source UUT (clk,dataIn,control,addr,progInput,dataOut,memOut,hit);
     initial 
     begin
         #200;
@@ -47,31 +41,45 @@ Cache_Source test_Cache_Source (
         assign control = 1;
         assign dataIn = 3'h01;
         assign progInput = 2'h00;
-        #20 assign clk = 1; 
-        #20 assign clk = 0; 
+        #200;
+        assign clk = 1; 
+        
+        #200;
+        assign clk = 0; 
         assign addr =4294967295'h00000008;
         assign control = 1;
         assign dataIn = 3'h02;
         assign progInput = 2'h00;
-        #20 assign clk = 1;
-        #20 assign clk = 0;  
+        #200;
+        assign clk = 1; 
+        
+        #200;
+        assign clk = 0;  
         assign addr = 4294967295'h000003FF;
         assign control = 1;
         assign dataIn = 3'h03;
         assign progInput = 2'h00;
-        #20 assign clk = 1;
-        #20 assign clk = 0; 
+        #200;
+        assign clk = 1; 
+        
+        #200;
+        assign clk = 0; 
         assign addr = 4294967295'h00000400;
         assign control = 1;
         assign dataIn = 3'h04;
         assign progInput = 2'h00;
-        #20 assign clk = 1;
-         #20 assign clk = 0; 
+        #200;
+        assign clk = 1; 
+        
+        #200;
+        assign clk = 0; 
         assign addr = 4294967295'h00001400;
         assign control = 1;
         assign dataIn = 3'h05;
         assign progInput = 2'h00;
-        #20 assign clk = 1;
+        #200;
+        assign clk = 1; 
+        
         $finish;       
 end
 endmodule
