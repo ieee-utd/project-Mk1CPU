@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module decoder(input[5:0] aLessThanB, input[5:0] aEqualB, input[5:0] aGreaterThanB, output[5:0] blt, output[5:0] bgt, output[5:0] beq, output[5:0] ble, output[5:0] bge, output[5:0] bne);
+module decoder(input aLessThanB, input aEqualB, input aGreaterThanB, output blt, output bgt, output beq, output ble, output bge, output bne);
 
 assign blt = aLessThanB & ~aEqualB & ~aGreaterThanB;
 assign bgt = ~aLessThanB & ~aEqualB & aGreaterThanB;
