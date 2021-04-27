@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../instruction_fetch.srcs/sources_1/new/counter.v" \
+"../../../../instruction_fetch.srcs/sources_1/new/if_id.v" \
+"../../../../instruction_fetch.srcs/sources_1/new/incrementer.v" \
+"../../../../instruction_fetch.srcs/sources_1/new/instruction_fetch.v" \
+"../../../../instruction_fetch.srcs/sources_1/new/instruction_mem.v" \
+"../../../../instruction_fetch.srcs/sources_1/new/mux_if.v" \
+"../../../../instruction_fetch.srcs/sim_1/new/instr_fetch_testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

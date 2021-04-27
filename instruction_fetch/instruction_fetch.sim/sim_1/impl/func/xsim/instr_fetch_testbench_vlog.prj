@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"instr_fetch_testbench_func_impl.v" \
+"../../../../../instruction_fetch.srcs/sim_1/new/instr_fetch_testbench.v" \
+
+# Do not sort compile order
+nosort

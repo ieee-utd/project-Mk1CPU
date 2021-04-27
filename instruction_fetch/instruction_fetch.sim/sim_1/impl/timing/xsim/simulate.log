@@ -1,0 +1,3 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$stop called at time : 20 ns : File "C:/Users/uncoo/Documents/Source/Verilog/instruction_fetch/instruction_fetch.srcs/sim_1/new/instr_fetch_testbench.v" Line 45
